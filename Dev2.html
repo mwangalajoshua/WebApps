@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: white;
+      width: 400px;
+      margin: 40px 0;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 80px;
+    }
+    button {
+      background-color: #007BFF;
+      border: none;
+      padding: 12px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Profile Information</h1>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="nonbinary">Non-binary</option>
+        <option value="prefer_not_to_say">Prefer not to say</option>
+      </select>
+
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" placeholder="Tell us something about yourself..."></textarea>
+
+      <button type="submit">Save Profile</button>
+    </form>
+  </div>
+</body>
+</html>
